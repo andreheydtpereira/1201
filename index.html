@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manutenção Prometeon V12.1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-panel">
+      <img class="hero-image" src="home_full.png" alt="Manutenção Prometeon">
+    </section>
+
+    <section class="nav-panel">
+      <div class="icon-row" id="iconRow">
+        <button class="icon-btn active" data-mod="visao" onclick="abrir('visao', this)">
+          <img src="icon_visao_geral.png" alt="Visão Geral">
+        </button>
+        <button class="icon-btn" data-mod="pendencias" onclick="abrir('pendencias', this)">
+          <img src="icon_pendencias.png" alt="Pendências">
+        </button>
+        <button class="icon-btn" data-mod="planejamento" onclick="abrir('planejamento', this)">
+          <img src="icon_planejamento.png" alt="Planejamento">
+        </button>
+        <button class="icon-btn" data-mod="materiais" onclick="abrir('materiais', this)">
+          <img src="icon_materiais.png" alt="Materiais">
+        </button>
+        <button class="icon-btn" data-mod="cadastro" onclick="abrir('cadastro', this)">
+          <img src="icon_cadastrar_materiais.png" alt="Cadastrar Materiais">
+        </button>
+        <button class="icon-btn" data-mod="equipe" onclick="abrir('equipe', this)">
+          <img src="icon_equipe.png" alt="Equipe">
+        </button>
+        <button class="icon-btn" data-mod="config" onclick="abrir('config', this)">
+          <img src="icon_configuracao.png" alt="Configuração">
+        </button>
+        <button class="icon-btn" data-mod="regras" onclick="abrir('regras', this)">
+          <img src="icon_regras.png" alt="Regras">
+        </button>
+      </div>
+    </section>
+
+    <section class="module-top-panel hidden" id="moduleTopPanel">
+      <button class="back-btn" onclick="voltarHome()">← Voltar</button>
+      <img id="moduleTopImage" class="module-top-image" src="topo_visao_geral.png" alt="Topo do módulo">
+    </section>
+
+    <section class="content-panel" id="conteudo"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
