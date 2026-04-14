@@ -1,0 +1,100 @@
+*{box-sizing:border-box} 
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(73,123,255,.16), transparent 26%),
+    linear-gradient(180deg,#06122f,#091a43 45%, #091635 100%);
+  color:#eef4ff;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.12;
+  background-image:
+    linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+.app-shell{
+  max-width:1100px;
+  margin:0 auto;
+  padding:14px;
+}
+.hero-panel,.nav-panel,.content-panel,.module-top-panel{
+  background:linear-gradient(180deg, rgba(10,24,70,.82), rgba(6,16,46,.96));
+  border:1px solid rgba(142,175,255,.16);
+  border-radius:26px;
+  box-shadow:0 18px 60px rgba(0,0,0,.34);
+}
+.hero-panel{padding:14px}
+.hero-image,.module-top-image{
+  width:100%;
+  display:block;
+  border-radius:22px;
+}
+.nav-panel{padding:12px 14px;margin-top:12px}
+.icon-row{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:110px;
+  gap:10px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.icon-row::-webkit-scrollbar{display:none}
+.icon-btn{
+  border:none;
+  background:transparent;
+  padding:0;
+  cursor:pointer;
+  transition:transform .18s ease, filter .18s ease;
+}
+.icon-btn img{
+  width:100%;
+  max-width:110px;
+  display:block;
+  border-radius:18px;
+}
+.icon-btn.active,.icon-btn:hover{
+  transform:translateY(-2px) scale(1.03);
+  filter:drop-shadow(0 0 16px rgba(90,133,255,.20));
+}
+.module-top-panel{padding:12px 14px;margin-top:12px}
+.back-btn{
+  display:inline-block;
+  margin-bottom:10px;
+  padding:12px 18px;
+  border-radius:14px;
+  border:none;
+  cursor:pointer;
+  color:#fff;
+  background:linear-gradient(135deg,#24468f,#5d89ff);
+}
+.content-panel{
+  margin-top:12px;
+  padding:16px;
+  min-height:180px;
+}
+.module-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:16px;
+}
+.module-title{
+  margin:0 0 10px;
+  font-size:28px;
+}
+.module-text{
+  color:#b9c8ef;
+  line-height:1.5;
+}
+.hidden{display:none}
+@media(max-width:780px){
+  .app-shell{padding:10px}
+  .icon-row{grid-auto-columns:96px;gap:8px}
+  .icon-btn img{max-width:96px}
+}
